@@ -23,6 +23,19 @@ public class Task {
     private String status;
     // pending, in progress, completed
 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
+
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     public int getTaskId() {
         return taskId;
     }

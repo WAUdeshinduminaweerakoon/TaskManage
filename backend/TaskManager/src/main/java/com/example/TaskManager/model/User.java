@@ -9,23 +9,21 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "Tasks")
+@Table(name = "User")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int taskId;
+    private int userId;
 
     private String name;
 
-
-
-    public int getTaskId() {
-        return taskId;
+    public int getUserId() {
+        return userId;
     }
 
-    public void setTaskId(int taskId) {
-        this.taskId = taskId;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public String getName() {
