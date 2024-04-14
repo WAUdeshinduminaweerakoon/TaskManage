@@ -6,4 +6,6 @@ import com.example.TaskManager.model.Task;
 public interface TaskService {
 
     Task save(TaskRequestDTO taskRequestDTO);
+
+    Task create(TaskRequestDTO taskRequestDTO);
 }

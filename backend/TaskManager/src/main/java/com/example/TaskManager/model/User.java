@@ -18,6 +18,9 @@ public class User {
 
     private String name;
 
+    public User(String userName) {
+    }
+
     public int getUserId() {
         return userId;
     }
