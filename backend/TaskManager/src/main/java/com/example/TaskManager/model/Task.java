@@ -16,55 +16,22 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int taskId;
 
-    private String title;
-
-    private String description;
-
-    private String status;
-    // pending, in progress, completed
-
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
 
+    private String taskTitle;
 
-    public User getUser() {
-        return user;
-    }
+    private String taskDescription;
 
-    public void setUser(User user) {
+    private String taskStatus;
+    // pending, in progress, completed
+
+    public Task(User user, String taskTitle, String taskDescription,String taskStatus ){
         this.user = user;
+        this.taskTitle = taskTitle;
+        this.taskDescription = taskDescription;
+        this.taskStatus = taskStatus;
     }
 
-    public int getTaskId() {
-        return taskId;
-    }
-
-    public void setTaskId(int taskId) {
-        this.taskId = taskId;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
 }
