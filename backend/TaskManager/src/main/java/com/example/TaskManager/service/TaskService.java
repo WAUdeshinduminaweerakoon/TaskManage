@@ -1,7 +1,9 @@
 package com.example.TaskManager.service;
 
+import com.example.TaskManager.dto.request.TaskRequestDTO;
 import com.example.TaskManager.model.Task;
 
 public interface TaskService {
-    public void saveTask (Task task);
+
+    Task save(TaskRequestDTO taskRequestDTO);
 }
