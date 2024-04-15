@@ -19,7 +19,7 @@ public class TaskServiceImpl implements TaskService {
     UserRepository userRepository;
 
     @Override
-    public Task save(TaskRequestDTO taskRequestDTO){
+    public Task create(TaskRequestDTO taskRequestDTO){
         User user = userRepository.findById(taskRequestDTO.getUserId()).orElse((null));
         if (user == null){
             //TODO:Handle the case when member is not found
@@ -36,8 +36,4 @@ public class TaskServiceImpl implements TaskService {
     }
 
 
-    @Override
-    public Task create(TaskRequestDTO taskRequestDTO) {
-        return null;
-    }
 }

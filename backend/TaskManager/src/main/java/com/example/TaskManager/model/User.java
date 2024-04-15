@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "User")
+@Table(name = "user")
 public class User {
 
     @Id
@@ -19,6 +19,7 @@ public class User {
     private String name;
 
     public User(String userName) {
+        this.name = userName;
     }
 
     public int getUserId() {

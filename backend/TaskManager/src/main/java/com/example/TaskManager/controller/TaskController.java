@@ -17,7 +17,7 @@ public class TaskController {
 
     @PostMapping("/create")
     public ResponseEntity<TaskResponseDTO> createTask(@RequestBody TaskRequestDTO taskRequestDTO){
-        Task task = taskService.save(taskRequestDTO);
+        Task task = taskService.create(taskRequestDTO);
         System.out.println(task);
         TaskResponseDTO taskResponseDTO = new TaskResponseDTO(
                 task.getTaskId(),
